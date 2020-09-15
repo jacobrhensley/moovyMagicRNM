@@ -12,5 +12,15 @@ namespace moovyMagicRNM.Controllers
         {
             return View ();
         }
+
+        public string PrintMessage()
+        {
+            return "<h1>Welcome!</><p>This is my first c sharp view!</p>";
+        }
+
+        public string Play(string name = "Jacob")
+        {
+            return "<h1>Welcome " + name + "!</><p>This is the play string!</p>";
+        }
     }
 }
