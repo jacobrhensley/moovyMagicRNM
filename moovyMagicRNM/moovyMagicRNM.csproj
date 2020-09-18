@@ -65,6 +65,7 @@
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\js\" />
+    <Folder Include="Scripts\img\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
@@ -175,6 +176,8 @@
     <Content Include="Views\Home\Movies.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Scripts\js\omdb.js" />
+    <Content Include="Scripts\js\movies.js" />
+    <Content Include="Scripts\img\alt-film.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-3.0.0.slim.min.map" />
