@@ -2,6 +2,12 @@
 let results = [];
 var localResults = JSON.parse(localStorage.localResults);
 
+window.addEventListener('keypress', function (e) {
+    if (e.keyCode == 13) {
+        getMovies()
+    }
+}, false);
+
 
 function getMovies() {
     var searchParam = document.getElementById('search').value;
@@ -31,5 +37,15 @@ function getMovies() {
         });
 
 };
+
+function getMovie() {
+    let id = this.getElementById('id').value;
+    console.log(this.id);
+    //localResults.forEach(movie => {
+
+
+    //    console.log(id);
+    //});
+}
 
 console.log(localResults);

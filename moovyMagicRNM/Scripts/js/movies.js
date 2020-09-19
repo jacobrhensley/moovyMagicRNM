@@ -4,19 +4,24 @@ var searchParam = JSON.parse(window.localStorage.getItem('searchParam'));
 var reference = `Results for "${ searchParam }"</h3>`;
 for (let i = 0; i <= localResults.length - 1; i++) {
 
-    insert += (`<div class="card my-3 p-2 bg-light col-5" style="width: 627px; height="241";>
-                  <div class="row no-gutters">
-                    <div class="col-4">
-                      <img src="${ localResults[i].Poster }" class="card-img" style="height:208px; width:138px; alt="~/Scripts/img/alt-film.jpg">
-                    </div>
-                    <div class="col-8">
-                      <div class="card-body">
-                        <h5 class="card-title">${ localResults[i].Title }</h5>
-                        <p class="card-text">${ localResults[i].Year }</p>
+    insert += (`
+                    <div class="card my-3 p-2 bg-light col-12 col-lg-5" style="width: 627px; height="241";>
+                    <a onclick="getMovie()" class="text-dark">
+                      <div class="row no-gutters">
+                        <div class="col-4">
+                          <img src="${ localResults[i].Poster }" class="card-img" style="height:208px; width:138px; object-fit: contain;" alt="Title Poster">
+                        </div>
+                        <div class="col-8">
+                          <div class="card-body">
+                            <h5 class="card-title">${ localResults[i].Title }</h5>
+                            <p class="card-text">${ localResults[i].Year }</p>
+                            <p hidden id="id">${ localResults[i].imdbID }</p>
+                          </div>
+                        </div>
                       </div>
+                    </a>
                     </div>
-                  </div>
-                </div>
+                
 `);
 }
 

@@ -21,6 +21,7 @@ namespace moovyMagicRNM.Controllers
 
         public ActionResult Details()
         {
+            
             return View("Details");
         }
     }
