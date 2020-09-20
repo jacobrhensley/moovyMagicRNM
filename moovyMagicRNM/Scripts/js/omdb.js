@@ -38,14 +38,10 @@ function getMovies() {
 
 };
 
-function getMovie() {
-    let id = this.getElementById('id').value;
-    console.log(this.id);
-    //localResults.forEach(movie => {
-
-
-    //    console.log(id);
-    //});
+function getMovie(clicked_id) {
+    localStorage.removeItem("details");
+    localStorage.details = JSON.stringify(clicked_id);
+    //alert(clicked_id);
 }
 
 console.log(localResults);
