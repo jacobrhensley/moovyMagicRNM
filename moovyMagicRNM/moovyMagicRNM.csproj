@@ -179,6 +179,7 @@
     <Content Include="Scripts\js\movies.js" />
     <Content Include="Scripts\img\alt-film.jpg" />
     <Content Include="Scripts\js\details.js" />
+    <Content Include="Scripts\js\bookmarks.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-3.0.0.slim.min.map" />

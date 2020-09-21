@@ -22,6 +22,7 @@ function getMovies() {
         })
         .then(function (data) {
             function count() {
+                console.log(data);
 
                 data.Search.forEach(movie => {
                     results.push(movie);
@@ -42,6 +43,11 @@ function getMovie(clicked_id) {
     localStorage.removeItem("details");
     localStorage.details = JSON.stringify(clicked_id);
     window.location.href = "/home/details";
+}
+
+function bookmark(clicked_id) {
+    console.log(clicked_id);
+    localStorage.bookmarks = localStorage.localResults = JSON.stringify(clicked_id);
 }
 
 console.log(localResults);
