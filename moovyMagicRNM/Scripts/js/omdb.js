@@ -1,14 +1,16 @@
 ﻿"use strict";
+//Creating empty variables to store information in locally
 let results = [];
 var localResults = JSON.parse(localStorage.localResults);
 
+//Adding functionallity to press enter key and submit the input for search
 window.addEventListener('keypress', function (e) {
     if (e.keyCode == 13) {
         getMovies()
     }
 }, false);
 
-
+//Taking the value of the search input and runing a fetch to omdb, clearing and then storing the results locally to push to local storage
 function getMovies() {
     var searchParam = document.getElementById('search').value;
 
@@ -33,21 +35,16 @@ function getMovies() {
             };
             count();
 
-            //localResults = JSON.parse(localStorage.localResults);
-
         });
 
 };
+
+//Grabbing information to view a single movie and storing the value in local storage
 
 function getMovie(clicked_id) {
     localStorage.removeItem("details");
     localStorage.details = JSON.stringify(clicked_id);
     window.location.href = "/home/details";
-}
-
-function bookmark(clicked_id) {
-    console.log(clicked_id);
-    localStorage.bookmarks = localStorage.localResults = JSON.stringify(clicked_id);
 }
 
 console.log(localResults);

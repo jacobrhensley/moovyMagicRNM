@@ -1,6 +1,8 @@
-﻿
+﻿//Creating variables to store grabbed objects locally
 var insert = "";
 var searchParam = JSON.parse(window.localStorage.getItem('searchParam'));
+
+//Creating the strings formatted for html
 var reference = `Results for "${ searchParam }"</h3>`;
 for (let i = 0; i <= localResults.length - 1; i++) {
 
@@ -20,8 +22,11 @@ for (let i = 0; i <= localResults.length - 1; i++) {
                     </div>
 `);
 }
+
+//Removing quotation marks from string for easier comparison
 details = localStorage.details.slice(1, -1);
 
 
+//Inserting strings into html
 document.getElementById("reference").innerHTML = reference;
 document.getElementById("results").innerHTML = insert;
