@@ -41,7 +41,7 @@ function getMovies() {
 function getMovie(clicked_id) {
     localStorage.removeItem("details");
     localStorage.details = JSON.stringify(clicked_id);
-    //alert(clicked_id);
+    window.location.href = "/home/details";
 }
 
 console.log(localResults);
